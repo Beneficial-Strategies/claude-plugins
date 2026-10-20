@@ -14,6 +14,27 @@ ISO 20022 messages in financial systems.
 - "What changed between pacs.008.001.08 and pacs.008.001.11?"
 - "Find all message definitions in the payments clearing and settlement business area"
 
+## Install the plugin (Claude Code)
+
+This repository is a plugin marketplace, `beneficial-strategies`, and the ISO 20022 MCP is the plugin `iso20022-mcp` in it:
+
+```
+claude plugin marketplace add Beneficial-Strategies/claude-plugins
+claude plugin install iso20022-mcp@beneficial-strategies
+```
+
+(On Claude Code 2.1.275 or later one step does both: `/plugin install iso20022-mcp --marketplace Beneficial-Strategies/claude-plugins`.) Then sign up as described below.
+
+**Already installed it before the marketplace was renamed?** The plugin used to be installed as `iso20022-mcp@iso20022-mcp` from the repository `Beneficial-Strategies/iso20022-mcp`. A registered marketplace is keyed by its name, so it cannot be renamed in place: remove the old one, which also removes the plugin installed from it and its saved options, add the new one and install again:
+
+```
+claude plugin marketplace remove iso20022-mcp
+claude plugin marketplace add Beneficial-Strategies/claude-plugins
+claude plugin install iso20022-mcp@beneficial-strategies
+```
+
+If your settings name the old marketplace (`extraKnownMarketplaces`, `enabledPlugins`), change them to `beneficial-strategies` and `iso20022-mcp@beneficial-strategies`. GitHub redirects the old repository address, but the commands above use the new one.
+
 ## Connect
 
 **Step 1:** Sign up at [iso20022-mcp.beneficialstrategies.com/connect](https://iso20022-mcp.beneficialstrategies.com/connect) — 30-day free trial, no credit card required.
