@@ -6,7 +6,7 @@
   "version": "1.0.0",
   "websiteUrl": "https://iso20022-mcp.beneficialstrategies.com/connect",
   "repository": {
-    "url": "https://github.com/Beneficial-Strategies/iso20022-mcp",
+    "url": "https://github.com/Beneficial-Strategies/claude-plugins",
     "source": "github"
   },
   "remotes": [

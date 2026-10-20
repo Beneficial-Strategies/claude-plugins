@@ -3,7 +3,7 @@
 #
 # To publish to Anthropic/Claude users (the primary goal):
 #   Submit via https://clau.de/plugin-directory-submission
-#   The .claude-plugin/plugin.json in this repo is the artifact they need.
+#   plugins/iso20022-mcp/.claude-plugin/plugin.json in this repo is the artifact they need.
 #   No automation required — it's a one-time form submission and review process.
 #
 # This workflow is a future/secondary concern for cross-platform discoverability
