@@ -35,6 +35,16 @@ claude plugin install iso20022-mcp@beneficial-strategies
 
 If your settings name the old marketplace (`extraKnownMarketplaces`, `enabledPlugins`), change them to `beneficial-strategies` and `iso20022-mcp@beneficial-strategies`. GitHub redirects the old repository address, but the commands above use the new one.
 
+## Skills
+
+The plugin also carries skills: guidance the agent loads when your question calls for it.
+
+| Skill | When it applies |
+|---|---|
+| `repository-guide` | how the ISO 20022 specification is organized: the business and message layers, how a message identifier is built, choice components, code set derivation, where to start |
+
+Skills are plain text of ours; they contain none of ISO's material. If you connect the server without this plugin, a short version of the guide is the server's resource `iso20022://instructions/repository-guide`.
+
 ## Connect
 
 **Step 1:** Sign up at [iso20022-mcp.beneficialstrategies.com/connect](https://iso20022-mcp.beneficialstrategies.com/connect) — 30-day free trial, no credit card required.
