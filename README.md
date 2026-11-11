@@ -42,6 +42,7 @@ The plugin also carries skills: guidance the agent loads when your question call
 | Skill | When it applies |
 |---|---|
 | `repository-guide` | how the ISO 20022 specification is organized: the business and message layers, how a message identifier is built, choice components, code set derivation, where to start |
+| `popular-messages` | which ISO 20022 messages are most widely used in production, by scheme (Swift CBPR+, SEPA, T2, Fedwire, FedNow, CHAPS, CHIPS, RTP): which messages a scheme uses, what to implement first, how adoption ranks |
 
 Skills are plain text of ours; they contain none of ISO's material. If you connect the server without this plugin, a short version of the guide is the server's resource `iso20022://instructions/repository-guide`.
 
