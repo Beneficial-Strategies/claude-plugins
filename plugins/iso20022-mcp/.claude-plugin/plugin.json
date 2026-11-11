@@ -1,6 +1,6 @@
 {
   "name": "iso20022-mcp",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Query the complete ISO 20022 financial messaging specification — 2,600+ message definitions, 12,000+ components, code sets, and migration paths.",
   "mcpServers": {
     "iso20022": {
