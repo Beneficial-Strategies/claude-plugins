@@ -1,0 +1,5 @@
+{
+  "name": "iso20022-libraries",
+  "version": "0.1.0",
+  "description": "Which Beneficial Strategies ISO 20022 library to use in a C# or TypeScript project, and when: guidance for the released NuGet packages and the npm pre-releases."
+}

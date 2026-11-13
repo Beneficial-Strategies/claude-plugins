@@ -46,6 +46,14 @@ The plugin also carries skills: guidance the agent loads when your question call
 
 Skills are plain text of ours; they contain none of ISO's material. If you connect the server without this plugin, a short version of the guide is the server's resource `iso20022://instructions/repository-guide`.
 
+## The libraries plugin
+
+A second plugin in this marketplace, `iso20022-libraries`, has no server: it is guidance for the agent about **which of our ISO 20022 libraries to use in a C# or TypeScript project, and when** (and when not). It covers the released NuGet packages (`Primitives`, `Messages`, `Messages.Records`, `Factory`, `Messages.Samples`) and the npm pre-releases (`iso20022-validate`, `-types`, `-serialize`, `-react`, `-react-ui`, which cover a subset of the specification).
+
+```
+claude plugin install iso20022-libraries@beneficial-strategies
+```
+
 ## Connect
 
 **Step 1:** Sign up at [iso20022-mcp.beneficialstrategies.com/connect](https://iso20022-mcp.beneficialstrategies.com/connect) — 30-day free trial, no credit card required.
