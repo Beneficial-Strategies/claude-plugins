@@ -2,7 +2,6 @@
   "name": "beneficial-strategies",
   "version": "1.0.0",
   "description": "Plugins from Beneficial Strategies.",
-  "repository": "https://github.com/Beneficial-Strategies/claude-plugins",
   "owner": {
     "name": "Beneficial Strategies",
     "email": "support@beneficialstrategies.com"
@@ -11,7 +10,7 @@
     {
       "name": "iso20022-mcp",
       "source": "./plugins/iso20022-mcp",
-      "description": "Query the complete ISO 20022 financial messaging specification \u2014 2,600+ message definitions, 12,000+ components, code sets, and migration paths."
+      "description": "Query the complete ISO 20022 financial messaging specification — 2,600+ message definitions, 12,000+ components, code sets, and migration paths."
     },
     {
       "name": "iso20022-libraries",
