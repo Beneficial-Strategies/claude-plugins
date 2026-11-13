@@ -17,5 +17,6 @@
     "nuget",
     "typescript",
     "npm"
-  ]
+  ],
+  "icon": "./.claude-plugin/icon.png"
 }

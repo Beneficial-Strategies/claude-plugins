@@ -16,6 +16,7 @@
     "mcp",
     "specification"
   ],
+  "icon": "./.claude-plugin/icon.png",
   "mcpServers": {
     "iso20022": {
       "type": "http",
