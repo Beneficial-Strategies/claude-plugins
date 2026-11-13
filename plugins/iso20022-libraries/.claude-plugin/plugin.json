@@ -1,5 +1,21 @@
 {
   "name": "iso20022-libraries",
   "version": "0.1.0",
-  "description": "Which Beneficial Strategies ISO 20022 library to use in a C# or TypeScript project, and when: guidance for the released NuGet packages and the npm pre-releases."
+  "description": "Which Beneficial Strategies ISO 20022 library to use in a C# or TypeScript project, and when: guidance for the released NuGet packages and the npm pre-releases.",
+  "author": {
+    "name": "Beneficial Strategies",
+    "email": "support@beneficialstrategies.com",
+    "url": "https://www.beneficialstrategies.com"
+  },
+  "homepage": "https://github.com/Beneficial-Strategies/claude-plugins",
+  "repository": "https://github.com/Beneficial-Strategies/claude-plugins",
+  "keywords": [
+    "iso20022",
+    "financial-messaging",
+    "dotnet",
+    "csharp",
+    "nuget",
+    "typescript",
+    "npm"
+  ]
 }
