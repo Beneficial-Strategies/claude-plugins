@@ -97,7 +97,19 @@ When several versions of a message exist, prefer the highest registered one. For
 | What are the valid codes? | `iso20022://element/{id}/details` of the code set |
 | What does a boolean mean? | the indicator type's meaning when true and when false |
 | What changed between versions? | `iso20022://snapshots` |
+| What must I implement to use a message or type? | `iso20022://element/{id}/downward-dependency-requirements` |
+| How are the business concepts around one related, to design a database or object model? | `iso20022://element/{id}/entity-relationships` |
 | Find anything by keyword | `iso20022://search?q=...` (spaces as `%20`; `-term` excludes) |
+
+## Two reads that give the whole picture in one response
+
+Walking a message level by level takes many reads. Two resources return a complete answer at once; neither is ever paged, because a partial answer would be wrong and not only short.
+
+**Everything a type needs: `iso20022://element/{id}/downward-dependency-requirements`.** For a message identifier (`pain.001.001.13`), an `xmi:id` or a type name, it lists every building block, component, choice (with every alternative), code set and simple type used, directly or through others, down to the leaves, each once and sorted by name. Use it to know what a library or a schema has to define before it can handle that message. A code set says whether it has members, and for a code set that restricts another it names the parent, whose codes it takes. Codes themselves are values, not types, so they are not listed: read them from the code set's `children`.
+
+**The business model around one concept: `iso20022://element/{id}/entity-relationships`.** `id` is a business component (`DebtorRole`, `PartyIdentificationInformation`), not a message component. `shape=relational` (the default) gives tables, columns, foreign keys and join tables; `shape=hierarchical` gives the supertype trees. `scope=lineage` (the default) covers the component, its supertypes and its subtypes, `scope=family` the whole tree under its topmost supertype, and `depth` follows association ends outward that many hops. It also gives the component's own flat list of members, with where each is defined. Both shapes map onto Mermaid (`erDiagram` for relational, `classDiagram` for hierarchical): draw only what a reader can take in, about 30 entities, and narrow with `scope` and `depth` before drawing.
+
+The dependency list is never cut. Without a subscription, `entity-relationships` lists at most a few attributes and association ends per component: `page.capped` is true, `meta.notice` says so, and `attributeCount` and `associationCount` give the real sizes.
 
 ## Search habits that pay off
 
