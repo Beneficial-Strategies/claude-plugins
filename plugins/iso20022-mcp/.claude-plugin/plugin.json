@@ -1,6 +1,7 @@
 {
   "name": "iso20022-mcp",
   "version": "1.2.0",
+  "license": "MIT",
   "description": "Query the complete ISO 20022 financial messaging specification — 2,600+ message definitions, 12,000+ components, code sets, and migration paths.",
   "author": {
     "name": "Beneficial Strategies",
