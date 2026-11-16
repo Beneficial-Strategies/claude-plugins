@@ -1,0 +1,39 @@
+# Validates the marketplace and each plugin. It publishes nothing: the marketplace is this repository, so whatever is
+# merged to main is what `claude plugin marketplace add Beneficial-Strategies/claude-plugins` installs (see "How a change reaches
+# people" in README.md). This check is the only automatic gate before a merge.
+name: Validate plugins
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Pinned to the version this was written and tested with; no login is needed to validate.
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code@2.1.311
+
+      - name: Validate the marketplace
+        run: claude plugin validate . --strict
+
+      # --profile directory also applies the checks the plugin directory makes on a submission (a license, a privacy
+      # policy URL for a plugin with a remote server, a README), so a plugin that passes here can be submitted.
+      - name: Validate each plugin
+        run: |
+          for plugin in plugins/*/; do
+            echo "::group::$plugin"
+            claude plugin validate "$plugin" --strict --profile directory
+            echo "::endgroup::"
+          done

@@ -99,6 +99,16 @@ claude plugin install iso20022-libraries@beneficial-strategies
 
 [support@beneficialstrategies.com](mailto:support@beneficialstrategies.com)
 
+## How a change reaches people
+
+This repository is the marketplace, so there is no separate publish step for Claude Code:
+
+- **Claude Code and Claude Desktop** read the marketplace straight from `main`. Merging a pull request is what publishes it. The workflow `Validate plugins` runs `claude plugin validate --strict` on every pull request and on `main`; it is the only automatic check, and it publishes nothing.
+- **Anthropic's plugin directory** is a separate, manual submission (a form, then a review). Nothing here submits to it. The plugins are checked with `--profile directory`, so a plugin that passes can be submitted.
+- **The MCP Registry** (`server.json`) is also manual for now. The workflow `Publish to MCP Registry` does not publish today: its install step fails, and it skips publishing without a token that is not configured.
+
+A new version of the service itself is deployed separately, from its own repository; the plugin only points to its address.
+
 ## License
 
 The contents of this repository (the plugin manifest, the skills and the reference text) are open source under the [MIT License](LICENSE). The license covers this repository only. It does not cover the hosted ISO 20022 MCP service the plugin connects to, which is a separate paid service governed by its own terms, nor the names and logos of Beneficial Strategies. This is not legal advice.
