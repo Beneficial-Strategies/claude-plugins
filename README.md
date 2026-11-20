@@ -41,6 +41,7 @@ The plugin also carries skills: guidance the agent loads when your question call
 
 | Skill | When it applies |
 |---|---|
+| `start` | what to do first with the server (also the command `/iso20022-mcp:start`): which plan applies, a license or billing step that holds a read, what to ask |
 | `repository-guide` | how the ISO 20022 specification is organized: the business and message layers, how a message identifier is built, choice components, code set derivation, where to start |
 | `popular-messages` | which ISO 20022 messages are most widely used in production, by scheme (Swift CBPR+, SEPA, T2, Fedwire, FedNow, CHAPS, CHIPS, RTP): which messages a scheme uses, what to implement first, how adoption ranks |
 
@@ -107,7 +108,7 @@ This repository is the marketplace, so there is no separate publish step for Cla
 - **Anthropic's plugin directory** is a separate, manual submission (a form, then a review). Nothing here submits to it. The plugins are checked with `--profile directory`, so a plugin that passes can be submitted.
 - **The MCP Registry** (`server.json`) is also manual for now. The workflow `Publish to MCP Registry` does not publish today: its install step fails, and it skips publishing without a token that is not configured.
 
-A new version of the service itself is deployed separately, from its own repository; the plugin only points to its address.
+A plugin's `version` in its `plugin.json` is raised in the pull request that changes what its users get (Claude Code updates a plugin only when the version changes); see the plugin's README for the rule. A new version of the service itself is deployed separately, from its own repository; the plugin only points to its address.
 
 ## License
 
