@@ -1,6 +1,6 @@
 {
   "name": "iso20022-mcp",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "license": "MIT",
   "privacyPolicyUrl": "https://beneficialstrategies.com/privacy/",
   "description": "Query the complete ISO 20022 financial messaging specification — 2,600+ message definitions, 12,000+ components, code sets, and migration paths.",
@@ -10,6 +10,9 @@
     "url": "https://www.beneficialstrategies.com"
   },
   "homepage": "https://beneficialstrategies.com/product/mcp-server/",
+  "supportUrl": "https://beneficialstrategies.com/contact/",
+  "documentationUrl": "https://beneficialstrategies.com/product/mcp-server/",
+  "termsOfServiceUrl": "https://beneficialstrategies.com/terms/",
   "repository": "https://github.com/Beneficial-Strategies/claude-plugins",
   "keywords": [
     "iso20022",
